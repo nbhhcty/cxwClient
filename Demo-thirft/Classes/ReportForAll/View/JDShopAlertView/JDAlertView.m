@@ -45,7 +45,19 @@
     }
     
     [topController.view addSubview:self];
+    
+#if 0
     [self.contentView  dc_PopUpAnimation];
+#else
+    self.contentView.transform = CGAffineTransformMakeScale(0, 0);
+    [UIView animateWithDuration:.5f delay:0 options:0 animations:^{
+        self.contentView.transform = CGAffineTransformMakeScale(1.15, 1.15);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:.2f animations:^{
+            self.contentView.transform = CGAffineTransformIdentity;
+        }];
+    }];
+#endif
 }
 
 - (void)dismiss
