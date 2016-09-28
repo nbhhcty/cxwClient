@@ -42,27 +42,27 @@
     [self addSubview:midView];
     _midView = midView;
     
-    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"今天",@"星期"]];
+    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"今天", @"星期"]];
     [self addSubview:seg];
     seg.tintColor = PNGreen;
     _seg = seg;
     _seg.selectedSegmentIndex = 0;
     
-    [self.displayView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.displayView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.topMargin.offset(JDTakeAwayCellMargin);
         make.leftMargin.offset(JDTakeAwayCellMargin);
         make.rightMargin.offset(-JDTakeAwayCellMargin);
         make.height.offset(JDTakeAwayDisplayHeight);
     }];
     
-    [self.midView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.midView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.displayView.mas_bottom).offset(10);
         make.leftMargin.offset(0);
         make.rightMargin.offset(0);
         make.height.offset(200);
     }];
     
-    [self.seg mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.seg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.midView.mas_bottom).offset(10);
         make.bottomMargin.offset(-20);
         make.centerX.offset(0);
@@ -163,7 +163,7 @@
     if (self.selectedIndex == 0) {
         return @[@"早上",@"中午",@"下午",@"晚上"];
     }else{
-        return @[@"MON",@"TUE",@"WED",@"THU",@"FRI",@"SAT",@"SUN"];
+        return @[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"];
     }
 }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="NO" initialViewController="TH0-WM-gA9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TH0-WM-gA9">
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2048" identifier="iOS"/>
         <development version="7000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,54 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8W-9m-mAD">
-                                <rect key="frame" x="26" y="157" width="209" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8W-9m-mAD">
+                                <rect key="frame" x="203" y="157" width="195" height="30"/>
                                 <state key="normal" title="获取指定日期的整体统计数据"/>
                                 <connections>
                                     <action selector="TTGdailyReportRequest_C:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WuG-jK-NGN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iii-A8-0MW">
-                                <rect key="frame" x="26" y="214" width="215" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iii-A8-0MW">
+                                <rect key="frame" x="218" y="214" width="165" height="30"/>
                                 <state key="normal" title="获取指定日期的排行数据"/>
                                 <connections>
                                     <action selector="TTGdailyRankRequest_C:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UyB-lC-ByX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t9-OV-xS2">
-                                <rect key="frame" x="26" y="266" width="215" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t9-OV-xS2">
+                                <rect key="frame" x="203" y="266" width="195" height="30"/>
                                 <state key="normal" title="获取店铺指定日期的统计数据"/>
                                 <connections>
                                     <action selector="TTGdailyReportForShopRequest_C:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g61-fV-cRY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIz-hd-WOC">
-                                <rect key="frame" x="108" y="304" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="rili:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKs-iF-4t7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-h6-cxy">
-                                <rect key="frame" x="100" y="107" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-h6-cxy">
+                                <rect key="frame" x="285" y="107" width="30" height="30"/>
                                 <state key="normal" title="页面"/>
                                 <connections>
                                     <action selector="GetIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Naf-oG-xH3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIz-hd-WOC">
+                                <rect key="frame" x="277" y="304" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rili:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKs-iF-4t7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7t9-OV-xS2" firstAttribute="top" secondItem="iii-A8-0MW" secondAttribute="bottom" constant="22" id="53Y-hy-P8f"/>
+                            <constraint firstItem="iii-A8-0MW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ti-tX-u6G"/>
+                            <constraint firstItem="tcy-h6-cxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fm4-UQ-7OL"/>
+                            <constraint firstItem="CIz-hd-WOC" firstAttribute="top" secondItem="7t9-OV-xS2" secondAttribute="bottom" constant="8" id="MNz-uO-0zG"/>
+                            <constraint firstItem="iii-A8-0MW" firstAttribute="top" secondItem="m8W-9m-mAD" secondAttribute="bottom" constant="27" id="NG2-7b-WTQ"/>
+                            <constraint firstItem="m8W-9m-mAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QoI-vq-P2P"/>
+                            <constraint firstItem="m8W-9m-mAD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="R0G-mH-k3Z"/>
+                            <constraint firstItem="CIz-hd-WOC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQO-XT-78K"/>
+                            <constraint firstItem="7t9-OV-xS2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0D-v6-zEL"/>
+                            <constraint firstItem="tcy-h6-cxy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="z6n-pR-D3A"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eai-iI-NsD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="231.63418290854574"/>
+            <point key="canvasLocation" x="782" y="-460"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="82L-Sz-QHx">

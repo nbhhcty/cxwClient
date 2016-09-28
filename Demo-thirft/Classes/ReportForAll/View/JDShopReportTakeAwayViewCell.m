@@ -55,6 +55,7 @@
     [topContentView addSubview:leftLabel];
     self.leftLabel = leftLabel;
     self.leftLabel.backgroundColor = [UIColor clearColor];
+    [self.leftLabel sizeToFit];
 
     UILabel *rightLabel = [UILabel new];
     rightLabel.text = @"单";
@@ -63,6 +64,7 @@
     [topContentView addSubview:rightLabel];
     self.rightLabel = rightLabel;
     self.rightLabel.backgroundColor = [UIColor clearColor];
+    [self.rightLabel sizeToFit];
 
     
     UIView *bottomContentView = [UIView new];
@@ -73,6 +75,7 @@
     JDTakeAwayReportView *reportView = [JDTakeAwayReportView new];
     [self.bottomContentView addSubview:reportView];
     self.reportView = reportView;
+    self.reportView.backgroundColor = [UIColor clearColor];
     
     [self addConstraints];
 }
@@ -80,40 +83,29 @@
 - (void)addConstraints
 {
     [self.topContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView);
-        make.top.equalTo(self.contentView);
-        make.right.equalTo(self.contentView);
-        make.height.offset(44.f);
+        make.left.top.right.equalTo(self.contentView);
+        make.height.mas_equalTo(44.f);
     }];
-    
     
     [self.bottomContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(0);
-        make.bottom.offset(0);
-        make.right.offset(0);
         make.top.equalTo(self.topContentView.mas_bottom).offset(0);
+        make.left.bottom.right.equalTo(self.contentView);
+        make.height.mas_equalTo(480);
     }];
     
-    
     [self.leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(0);
-        make.left.offset(15);
-        make.bottom.offset(0);
-        make.width.offset(150);
+        make.top.equalTo(self.topContentView);
+        make.left.equalTo(self.topContentView).offset(15);
     }];
     
     [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topContentView);
         make.right.equalTo(self.topContentView).offset(-15);
-        make.bottom.equalTo(self.topContentView);
-        make.width.offset(150);
     }];
-    
     
     [self.reportView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.bottomContentView).insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
-    
 }
 
 - (void)initalBinding
