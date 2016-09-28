@@ -237,9 +237,9 @@
 - (NSArray *)getXLabel
 {
     if (self.selectedIndex == 0) {
-        return @[@"早上",@"中午",@"下午",@"晚上"];
+        return @[@"早上", @"中午", @"下午", @"晚上"];
     }else{
-        return @[@"MON",@"TUE",@"WED",@"THU",@"FRI",@"SAT",@"SUN"];
+        return @[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"];
     }
 }
 
